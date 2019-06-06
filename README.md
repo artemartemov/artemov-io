@@ -1,5 +1,14 @@
 # artemov-io
 
+## Frontend Build Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/efa010a2-a037-434e-9092-9cea7211c387/deploy-status)](https://app.netlify.com/sites/artemov-io/deploys)
+
+## Backend Build Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/47aa1523-b7aa-496b-a14e-0c3861a64fd4/deploy-status)](https://app.netlify.com/sites/artemov-io-studio/deploys)
+
+
+
+
 ## Quick start
 
 1. Clone this repository
