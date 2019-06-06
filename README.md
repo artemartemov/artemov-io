@@ -1,29 +1,19 @@
 # artemov-io
 
-_A portfolio using structured content and a static site builder._
-
-Deployed from [sanity.io/create](https://www.sanity.io/create/?template=sanity-io%2Fsanity-template-gatsby-portfolio).
-
-## What you have
-
-- A blazing fast portfolio with [Gatsby.js](https://gatsbyjs.org)
-- Structured content using [Sanity.io](https://www.sanity.io)
-- Global deployment on [Netlify](https://netlify.com)
-
 ## Quick start
 
-1. Clone this repository from your GitHub account
-2. `npm install` in the project root folder on local
-3. `npm run dev` to start the studio and frontend locally
+1. Clone this repository
+2. `yarn install` in the project root folder on local
+3. `yarn run dev` to start the studio and frontend locally
    - Your studio should be running on [http://localhost:3333](http://localhost:3333)
    - Your frontend should be running on [http://localhost:8000](http://localhost:8000)
-4. `npm run build` to build to production locally
+4. `yarn run build` to build to production locally
 
 ## Enable real-time content preview on development
 
 1. Go to your [project’s API settings on manage.sanity.io](https://manage.sanity.io/projects/iguw7e23/settings/api) and create a token with read rights.
 2. Rename `.env.development.tenplate` to `.env.development` and paste in the token: `SANITY_READ_TOKEN="yourTokenHere"`.
-3. Restart the development server (`ctrl + C` and `npm run dev`).
+3. Restart the development server (`ctrl + C` and `yarn run dev`).
 
 If you want to turn off preview you can set `watchMode: false` in gatsby-config.js. If you just want to preview published changes you can set `overlayDrafts: false` in gatsby-config.js.
 
