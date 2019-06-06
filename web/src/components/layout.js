@@ -44,7 +44,7 @@ const Layout = ({ children }) => (
     {children}
     <Footer>
       <p>
-        © {new Date().getFullYear()}, Built with 💛 on <a href="https://www.sanity.io">Sanity</a> &amp;{' '}
+        © {new Date().getFullYear()}, Built with 💛 using <a href="https://www.sanity.io">Sanity</a> &amp;{' '}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </p>
     </Footer>
