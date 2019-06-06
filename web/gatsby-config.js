@@ -29,5 +29,18 @@ module.exports = {
         omitGoogleFont: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Artem Artemov Portflio`,
+        short_name: `Artem Artemov Portfolio`,
+        start_url: `/`,
+        background_color: `#FFFFFF`,
+        theme_color: `#0e0fed`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`,
+      },
+    },
+    'gatsby-plugin-offline',
   ],
 };
