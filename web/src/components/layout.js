@@ -1,23 +1,54 @@
-import React from 'react'
-import Header from './header'
+import React from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
+import { scale } from 'utils';
+import Header from './header';
 
-import '../styles/layout.css'
-import styles from './layout.module.css'
+const GlobalStyle = createGlobalStyle`
+  & a {
+    color: #0e0fed;
+    text-decoration: underline;
+    text-decoration-skip: ink;
 
-const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
-  <>
-    <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
-    <div className={styles.content}>{children}</div>
-    <footer className={styles.footer}>
-      <div className={styles.footerWrapper}>
-        <div className={styles.siteInfo}>
-          © {new Date().getFullYear()}, Built with <a href='https://www.sanity.io'>Sanity</a> &amp;
-          {` `}
-          <a href='https://www.gatsbyjs.org'>Gatsby</a>
-        </div>
-      </div>
-    </footer>
-  </>
-)
+    &:hover {
+      color: #000000;
+    }
+  }
+`;
 
-export default Layout
+const LayoutWrapper = styled.main`
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 100%;
+`;
+
+const Footer = styled.footer`
+  ${scale(-0.25)};
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+
+  & p {
+    margin-bottom: 1rem;
+  }
+`;
+
+const Layout = ({ children }) => (
+  <LayoutWrapper>
+    <GlobalStyle />
+    {/* <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} /> */}
+    {children}
+    <Footer>
+      <p>
+        © {new Date().getFullYear()}, Built with 💛 on <a href="https://www.sanity.io">Sanity</a> &amp;{' '}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </p>
+    </Footer>
+  </LayoutWrapper>
+);
+
+export default Layout;

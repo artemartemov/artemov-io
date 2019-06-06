@@ -1,11 +1,23 @@
 {
   "root": true,
+  "api": {
+    "projectId": "iguw7e23",
+    "dataset": "development"
+  },
   "project": {
     "name": "artemov.io"
   },
-  "api": {
-    "projectId": "iguw7e23",
-    "dataset": "production"
+  "env": {
+    "development": {
+      "api": {
+        "dataset": "development"
+      }
+    },
+    "production": {
+      "api": {
+        "dataset": "production"
+      }
+    }
   },
   "plugins": [
     "@sanity/base",

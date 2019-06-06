@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+import { mq } from 'utils';
 
-import styles from './container.module.css'
+const PageContainerWrapper = styled.div`
+  margin: 0 1rem;
 
-const Container = ({children}) => {
-  return <div className={styles.root}>{children}</div>
-}
+  ${mq.tablet`
+	max-width: 600px;
+	margin: 0 auto;
+  `}
+`;
 
-export default Container
+const Container = ({ children }) => <PageContainerWrapper>{children}</PageContainerWrapper>;
+
+export default Container;

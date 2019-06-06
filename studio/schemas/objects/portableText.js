@@ -1,6 +1,6 @@
 export default {
   title: 'Portable Text',
-  name: 'projectPortableText',
+  name: 'portableText',
   type: 'array',
   of: [
     {
@@ -35,6 +35,7 @@ export default {
                 title: 'URL',
                 name: 'href',
                 type: 'url',
+                validation: Rule => Rule.uri({ scheme: ['http', 'https', 'mailto'] }),
               },
             ],
           },
