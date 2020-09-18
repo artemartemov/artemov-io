@@ -1,4 +1,4 @@
-[context.deploy-preview]
-	command = "npm run build-web"
-[build]
-  base    = "web"
+# [context.deploy-preview]
+# 	command = "npm run build-web"
+# [build]
+#   base    = "web"
