@@ -1,5 +1,4 @@
 [context.deploy-preview]
 	command = "npm run build-web"
 [build]
-  command = "npx lerna build"
   base    = "web"
