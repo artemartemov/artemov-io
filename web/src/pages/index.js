@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { Container, GraphQLErrorList, SEO, Layout, BlockContent, HomeLinks } from 'components';
+import { GraphQLErrorList, SEO, Layout, BlockContent, HomeLinks } from 'components';
 
 export const query = graphql`
   query IndexPageQuery {
@@ -37,12 +37,10 @@ const IndexPage = ({ data, errors }) => {
   return (
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
-      <Container>
-        {homepage._rawBody && <BlockContent blocks={homepage._rawBody || []} />}
-        <HomeLinks />
+      {homepage._rawBody && <BlockContent blocks={homepage._rawBody || []} />}
+      <HomeLinks />
 
-        {/* {projectNodes && <ProjectPreviewGrid title="Latest projects" nodes={projectNodes} browseMoreHref="/archive/" />} */}
-      </Container>
+      {/* {projectNodes && <ProjectPreviewGrid title="Latest projects" nodes={projectNodes} browseMoreHref="/archive/" />} */}
     </Layout>
   );
 };

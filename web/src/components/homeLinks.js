@@ -1,31 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-import { scale, mq } from 'utils';
 
-const LinkList = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  max-width: 75vw;
-
-  & li {
-    ${scale(0.25)}
-    margin-right: 3rem;
-	float: left;
-
-    /* ${mq.mobileWide`
-		display: inline-flex;
-	`} */
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-`;
-
-const HomeLinks = props => (
-  <LinkList>
+const HomeLinks = () => (
+  <ul>
     <li>
       <a href="mailto:artem@artemov.io?subject=Services Requested&body= --- Sent from artemov.io">Email</a>
     </li>
@@ -44,7 +20,7 @@ const HomeLinks = props => (
         Twitter
       </a>
     </li>
-  </LinkList>
+  </ul>
 );
 
 export default HomeLinks;
