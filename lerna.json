@@ -1,8 +1,4 @@
 {
-  "packages": [
-    "web",
-    "studio"
-  ],
-  "version": "1.0.0",
-  "npmClient": "npm"
+  "packages": ["web", "studio"],
+  "version": "1.0.0"
 }
