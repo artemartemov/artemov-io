@@ -3,7 +3,7 @@
   "name": "artemov-io",
   "version": "1.0.0",
   "scripts": {
-    "preinstall": "lerna bootstrap",
+    "preinstall": "npx lerna bootstrap",
     "build": "lerna run build --parallel",
     "dev": "lerna run dev --parallel",
     "format": "lerna run format",
