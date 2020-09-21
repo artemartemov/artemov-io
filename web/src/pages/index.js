@@ -1,7 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { GraphQLErrorList, SEO, Layout, BlockContent, HomeLinks } from 'components';
+import { GraphQLErrorList, SEO, BlockContent, HomeLinks } from 'components';
+
+import Layout from 'containers/layout';
 
 export const query = graphql`
   query IndexPageQuery {
