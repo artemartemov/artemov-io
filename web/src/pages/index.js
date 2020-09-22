@@ -14,7 +14,7 @@ export const query = graphql`
     }
     homepage: sanityIndexPage {
       title
-      _rawBody
+      _rawBody(resolveReferences: { maxDepth: 5 })
     }
   }
 `;

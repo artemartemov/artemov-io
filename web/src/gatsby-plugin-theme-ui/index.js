@@ -1,6 +1,19 @@
 // import '../fonts/fonts.css';
 import layout from './layout';
 
+const BASE_FONT = 16;
+const BASE_LINE_HEIGHT = 1.5;
+const BASELINE = BASE_FONT * BASE_LINE_HEIGHT;
+const RATIO = 1.333;
+
+// [ 16, 23, 32, 45, 64, 90 ]
+const FONT_SIZES = [0, 1, 2, 3, 4, 5].map((n) => Math.round(BASE_FONT * RATIO ** n));
+
+// [ 1.5, 1.0435, 1.5, 1.0667, 1.125, 1.0667 ]
+const LINE_HEIGHTS = FONT_SIZES.map((f) => (Math.ceil(f / BASELINE) * BASELINE) / f);
+
+console.log(LINE_HEIGHTS);
+
 export default {
   colors: {
     text: '#000',
@@ -27,11 +40,15 @@ export default {
     heading: 700,
     bold: 700,
   },
-  lineHeights: {
-    body: 1.5,
-    heading: 1.125,
+  fontSizes: FONT_SIZES,
+  lineHeights: LINE_HEIGHTS,
+  text: {
+    heading: {
+      fontFamily: 'heading',
+      fontWeight: 'heading',
+      lineHeight: 'heading',
+    },
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   breakpoints: ['40em', '52em', '64em'],
   borderWidths: {
@@ -41,18 +58,16 @@ export default {
     md: '4px',
     lg: '8px',
   },
-  text: {
-    heading: {
-      fontFamily: 'heading',
-      fontWeight: 'heading',
-      lineHeight: 'heading',
-    },
+  sizes: {
+    mainBodyContainer: 768,
   },
+  ...layout,
   styles: {
     root: {
       fontFamily: 'body',
       fontWeight: 'body',
-      lineHeight: 'body',
+      fontSize: 0,
+      lineHeight: 0,
       main: {
         display: 'flex',
         flexDirection: 'column',
@@ -83,7 +98,7 @@ export default {
         p: 0,
         display: 'flex',
         listStyleType: 'none',
-        fontSize: [2, 3],
+        fontSize: [0],
       },
       li: {
         ml: '1rem',
@@ -91,26 +106,32 @@ export default {
           ml: 0,
         },
       },
-      p: {
-        fontSize: [2, 3],
-      },
       h1: {
-        variant: 'text.heading',
-        fontSize: [5, 6],
+        fontSize: [5],
+        lineHeight: [5],
         color: 'black',
         wordWrap: 'wrap',
       },
       h2: {
-        variant: 'text.heading',
-        fontSize: [4, 5],
+        fontSize: [4],
+        lineHeight: [4],
+      },
+      h3: {
+        fontSize: [3],
+        lineHeight: [3],
+      },
+      h4: {
+        fontSize: [2],
+        lineHeight: [2],
+      },
+      h5: {
+        fontSize: [1],
+        lineHeight: [1],
       },
       h6: {
-        fontSize: [2, 3, 4],
+        fontSize: [0],
+        lineHeight: [0],
       },
     },
   },
-  sizes: {
-    mainBodyContainer: 768,
-  },
-  ...layout,
 };
