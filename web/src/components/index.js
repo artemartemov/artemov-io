@@ -1,4 +1,4 @@
-export { default as BlockContent } from './block-content';
+export { default as PortableText } from './portable-text';
 export { default as Container } from './container';
 export { default as GraphQLErrorList } from './graphql-error-list';
 export { default as Layout } from './layout';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { GraphQLErrorList, SEO, BlockContent, HomeLinks } from 'components';
+import { GraphQLErrorList, SEO, PortableText, HomeLinks } from 'components';
 
 import Layout from 'containers/layout';
 
@@ -39,7 +39,7 @@ const IndexPage = ({ data, errors }) => {
   return (
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
-      {homepage._rawBody && <BlockContent blocks={homepage._rawBody || []} />}
+      {homepage._rawBody && <PortableText blocks={homepage._rawBody || []} />}
       <HomeLinks />
 
       {/* {projectNodes && <ProjectPreviewGrid title="Latest projects" nodes={projectNodes} browseMoreHref="/archive/" />} */}
