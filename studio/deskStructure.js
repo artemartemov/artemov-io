@@ -1,13 +1,34 @@
 import S from '@sanity/desk-tool/structure-builder';
-import MdSettings from 'react-icons/lib/md/settings';
+import PreviewIFrame from './structure/previewIFrame';
+import pages from './structure/pages';
 
 const hiddenDocTypes = listItem =>
-  !['category', 'person', 'project', 'siteSettings', 'indexPage'].includes(listItem.getId());
+  !['category', 'person', 'project', 'siteSettings', 'indexPage', 'aboutPage', 'page', 'route'].includes(
+    listItem.getId()
+  );
 
 export default () =>
   S.list()
     .title('Content')
     .items([
+      S.documentListItem()
+        .schemaType('siteSettings')
+        .title('Site settings')
+        .child(
+          S.document()
+            .schemaType('siteSettings')
+            .documentId('siteSettings')
+            .views([S.view.form(), PreviewIFrame()])
+        ),
+      S.documentListItem()
+        .title('Frontpage')
+        .schemaType('page')
+        .child(
+          S.document()
+            .schemaType('page')
+            .documentId('frontpage')
+            .views([S.view.form(), PreviewIFrame()])
+        ),
       S.listItem()
         .title('Home Page')
         .child(
@@ -16,29 +37,6 @@ export default () =>
             .schemaType('indexPage')
             .documentId('indexPage')
         ),
-      S.listItem()
-        .title('Settings')
-        .child(
-          S.editor()
-            .id('siteSettings')
-            .schemaType('siteSettings')
-            .documentId('siteSettings')
-        )
-        .icon(MdSettings),
-      // S.listItem()
-      //   .title('Projects')
-      //   .schemaType('project')
-      //   .child(S.documentTypeList('project').title('Projects')),
-      // S.listItem()
-      //   .title('People')
-      //   .schemaType('person')
-      //   .child(S.documentTypeList('person').title('People')),
-      // S.listItem()
-      //   .title('Categories')
-      //   .schemaType('category')
-      //   .child(S.documentTypeList('category').title('Categories')),
-      // This returns an array of all the document types
-      // defined in schema.js. We filter out those that we have
-      // defined the structure above
+      pages,
       ...S.documentTypeListItems().filter(hiddenDocTypes),
     ]);

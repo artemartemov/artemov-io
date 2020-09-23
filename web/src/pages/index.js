@@ -9,8 +9,6 @@ export const query = graphql`
   query IndexPageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
-      description
-      keywords
     }
     homepage: sanityIndexPage {
       title
@@ -20,6 +18,7 @@ export const query = graphql`
 `;
 
 const IndexPage = ({ data, errors }) => {
+  console.log(data);
   if (errors) {
     return (
       <Layout>

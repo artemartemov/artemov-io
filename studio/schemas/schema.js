@@ -11,6 +11,10 @@ import category from './documents/category';
 import person from './documents/person';
 import project from './documents/project';
 import siteSettings from './documents/siteSettings';
+import indexPage from './documents/indexPage';
+import page from './documents/page';
+import route from './documents/route';
+import navMenu from './documents/navMenu';
 
 // Object types
 import bioPortableText from './objects/bioPortableText';
@@ -19,7 +23,7 @@ import projectMember from './objects/projectMember';
 import projectPortableText from './objects/projectPortableText';
 import simplePortableText from './objects/simplePortableText';
 import portableText from './objects/portableText';
-import indexPage from './documents/indexPage';
+import cta from './objects/cta';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -36,12 +40,16 @@ export default createSchema({
     portableText,
     projectPortableText,
     simplePortableText,
+    cta,
     // The following are document types which will appear
     // in the studio.
+    route,
     category,
     person,
     project,
     siteSettings,
     indexPage,
+    page,
+    navMenu,
   ]),
 });
