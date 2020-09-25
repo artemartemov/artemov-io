@@ -4,7 +4,7 @@ import { jsx } from 'theme-ui';
 const Layout = ({ children }) => (
   <div
     sx={{
-      variant: 'layout.root',
+      variant: 'layouts.root',
     }}
   >
     <main>

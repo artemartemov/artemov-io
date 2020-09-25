@@ -3,8 +3,6 @@ import { graphql } from 'gatsby';
 
 import { GraphQLErrorList, SEO, PortableText } from 'components';
 
-import Layout from 'containers/layout';
-
 export const query = graphql`
   query PageTemplateQuery($id: String!) {
     route: sanityRoute(id: { eq: $id }) {
@@ -25,11 +23,7 @@ const Page = (props) => {
   const { data, errors } = props;
 
   if (errors) {
-    return (
-      <Layout>
-        <GraphQLErrorList errors={errors} />
-      </Layout>
-    );
+    return <GraphQLErrorList errors={errors} />;
   }
 
   const { site } = data || {};
@@ -46,10 +40,10 @@ const Page = (props) => {
   const pageTitle = data.route && page.title;
 
   return (
-    <Layout navMenuItems={menuItems} textWhite>
+    <>
       <SEO title={pageTitle} description={site.description} keywords={site.keywords} />
       {page._rawBody && <PortableText blocks={page._rawBody || []} />}
-    </Layout>
+    </>
   );
 };
 

@@ -1,6 +1,7 @@
 export default {
   type: 'document',
   name: 'navigationMenu',
+  title: 'Menus',
   fields: [
     {
       type: 'string',

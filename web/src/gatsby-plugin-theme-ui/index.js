@@ -1,5 +1,5 @@
 // import '../fonts/fonts.css';
-import layout from './layout';
+import layouts from './layouts';
 
 const BASE_FONT = 16;
 const BASE_LINE_HEIGHT = 1.5;
@@ -61,7 +61,7 @@ export default {
   sizes: {
     mainBodyContainer: 768,
   },
-  ...layout,
+  ...layouts,
   styles: {
     root: {
       fontFamily: 'body',

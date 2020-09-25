@@ -23,7 +23,7 @@ async function createPages(pathPrefix = '/', graphql, actions, reporter) {
   routeEdges.forEach((edge) => {
     const { id, slug = {} } = edge.node;
     const path = [pathPrefix, slug.current, '/'].join('');
-    reporter.info(`Creating landing page: ${path}`);
+    reporter.info(`Creating Page: ${path}`);
     createPage({
       path,
       component: require.resolve('./src/templates/page.js'),

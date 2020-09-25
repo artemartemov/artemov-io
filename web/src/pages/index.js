@@ -3,8 +3,6 @@ import { graphql } from 'gatsby';
 
 import { GraphQLErrorList, SEO, PortableText, HomeLinks } from 'components';
 
-import Layout from 'containers/layout';
-
 export const query = graphql`
   query IndexPageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
@@ -18,13 +16,8 @@ export const query = graphql`
 `;
 
 const IndexPage = ({ data, errors }) => {
-  console.log(data);
   if (errors) {
-    return (
-      <Layout>
-        <GraphQLErrorList errors={errors} />
-      </Layout>
-    );
+    return <GraphQLErrorList errors={errors} />;
   }
 
   const { site, homepage } = data || {};
@@ -36,13 +29,13 @@ const IndexPage = ({ data, errors }) => {
   }
 
   return (
-    <Layout>
+    <>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       {homepage._rawBody && <PortableText blocks={homepage._rawBody || []} />}
       <HomeLinks />
 
       {/* {projectNodes && <ProjectPreviewGrid title="Latest projects" nodes={projectNodes} browseMoreHref="/archive/" />} */}
-    </Layout>
+    </>
   );
 };
 
