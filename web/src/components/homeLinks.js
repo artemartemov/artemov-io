@@ -1,7 +1,12 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
 
 const HomeLinks = () => (
-  <ul>
+  <ul
+    sx={{
+      variant: 'lists.homepage',
+    }}
+  >
     <li>
       <a href="mailto:artem@artemov.io?subject=Services Requested&body= --- Sent from artemov.io">Email</a>
     </li>

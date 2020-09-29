@@ -12,8 +12,6 @@ const FONT_SIZES = [0, 1, 2, 3, 4, 5].map((n) => Math.round(BASE_FONT * RATIO **
 // [ 1.5, 1.0435, 1.5, 1.0667, 1.125, 1.0667 ]
 const LINE_HEIGHTS = FONT_SIZES.map((f) => (Math.ceil(f / BASELINE) * BASELINE) / f);
 
-console.log(LINE_HEIGHTS);
-
 export default {
   colors: {
     text: '#000',
@@ -93,19 +91,6 @@ export default {
           color: 'secondary',
         },
       },
-      ul: {
-        m: 0,
-        p: 0,
-        display: 'flex',
-        listStyleType: 'none',
-        fontSize: [0],
-      },
-      li: {
-        ml: '1rem',
-        ':first-of-type': {
-          ml: 0,
-        },
-      },
       h1: {
         fontSize: [5],
         lineHeight: [5],
@@ -131,6 +116,21 @@ export default {
       h6: {
         fontSize: [0],
         lineHeight: [0],
+      },
+    },
+  },
+  lists: {
+    homepage: {
+      m: 0,
+      p: 0,
+      display: 'flex',
+      listStyleType: 'none',
+      fontSize: [1],
+      li: {
+        ml: '1rem',
+        ':first-of-type': {
+          ml: 0,
+        },
       },
     },
   },
