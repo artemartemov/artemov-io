@@ -1,10 +1,17 @@
 // import '../fonts/fonts.css';
 import layouts from './layouts';
+import '../fonts/fonts.css';
+import components from './components'
 
-const BASE_FONT = 16;
+import nightOwl from '@theme-ui/prism/presets/night-owl'
+
+const BASE_FONT = 32;
 const BASE_LINE_HEIGHT = 1.5;
 const BASELINE = BASE_FONT * BASE_LINE_HEIGHT;
-const RATIO = 1.333;
+
+const BREAKPOINTS = ['768px', '960px', '1200px', '1220px'];
+
+const RATIO = 1.33;
 
 // [ 16, 23, 32, 45, 64, 90 ]
 const FONT_SIZES = [0, 1, 2, 3, 4, 5].map((n) => Math.round(BASE_FONT * RATIO ** n));
@@ -12,34 +19,116 @@ const FONT_SIZES = [0, 1, 2, 3, 4, 5].map((n) => Math.round(BASE_FONT * RATIO **
 // [ 1.5, 1.0435, 1.5, 1.0667, 1.125, 1.0667 ]
 const LINE_HEIGHTS = FONT_SIZES.map((f) => (Math.ceil(f / BASELINE) * BASELINE) / f);
 
-export default {
-  colors: {
-    text: '#000',
-    primary: '#0e0fed',
-    background: 'white',
-    secondary: '#000ff',
-    accent: '#495057',
-    highlight: '#1de9b6',
-    muted: '#828291',
-    mode: {
-      dark: {
-        text: '#fff',
-        background: '#000',
-      },
+const baselineMultiple = (w) => (theme) => theme.baseline * w;
+
+const SPACE = [0, 1, 2, 4, 8].map((s) => s * BASELINE);
+
+const COLORS = {
+  text: '#000',
+  primary: '#0e0fed',
+  background: '#ffffff',
+  secondary: '#000ff',
+  accent: '#495057',
+  highlight: '#1de9b6',
+  muted: '#828291',
+  mode: {
+    dark: {
+      text: '#fff',
+      background: '#000',
     },
   },
+};
+
+const Heading = {
+  fontFamily: 'heading',
+};
+
+const HeadingH1 = {
+  ...Heading,
+  fontSize: [1, 2, 3],
+  lineHeight: [1, 2, 3],
+  fontWeight: '900',
+  letterSpacing: '-0.025em'
+};
+
+const HeadingH2 = {
+  ...Heading,
+  fontSize: [1, 2],
+  lineHeight: [1],
+  mb: 0,
+  fontWeight: '900',
+
+  '* + &': {
+    mt: 2,
+  },
+};
+
+const HeadingH3 = {
+  fontSize: [1],
+  lineHeight: [1],
+  fontWeight: '900',
+
+  '* + &': {
+    mt: 2,
+  },
+};
+
+const HeadingH4 = {
+  fontSize: [0, 1],
+  lineHeight: [0, 1],
+  fontWeight: '700',
+
+  '* + &': {
+    mt: baselineMultiple(1.5),
+  },
+};
+
+const HeadingH5 = {
+  fontSize: [0, 1],
+  fontWeight: 'body',
+  textTransform: 'uppercase',
+
+  '* + &': {
+    mt: baselineMultiple(1.5),
+  },
+};
+
+const HeadingH6 = {
+  fontSize: [0],
+  fontWeight: '700',
+
+  '* + &': {
+    mt: baselineMultiple(0.75),
+  },
+};
+
+export default {
+  ...components,
+  baseline: BASELINE,
+  space: SPACE,
+
+  fontSizes: FONT_SIZES,
+  lineHeights: LINE_HEIGHTS,
+
+  breakpoints: BREAKPOINTS,
+
+  mediaQueries: {
+    medium: `@media screen and (min-width: ${BREAKPOINTS[0]})`,
+    large: `@media screen and (min-width: ${BREAKPOINTS[1]})`,
+  },
+
+  colors: COLORS,
   fonts: {
-    body: 'system-ui, sans-serif',
-    heading: 'system-ui, sans-serif',
+    body: 'Inter, system-ui, sans-serif',
+    heading: 'Inter, system-ui, sans-serif',
     monospace: 'Menlo, monospace',
   },
   fontWeights: {
     body: 400,
-    heading: 700,
+    heading: 900,
     bold: 700,
   },
-  fontSizes: FONT_SIZES,
-  lineHeights: LINE_HEIGHTS,
+
   text: {
     heading: {
       fontFamily: 'heading',
@@ -47,8 +136,6 @@ export default {
       lineHeight: 'heading',
     },
   },
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-  breakpoints: ['40em', '52em', '64em'],
   borderWidths: {
     '0': '0',
     none: '0',
@@ -66,6 +153,7 @@ export default {
       fontWeight: 'body',
       fontSize: 0,
       lineHeight: 0,
+
       main: {
         display: 'flex',
         flexDirection: 'column',
@@ -92,31 +180,76 @@ export default {
         },
       },
       h1: {
-        fontSize: [5],
-        lineHeight: [5],
-        color: 'black',
-        wordWrap: 'wrap',
+        ...HeadingH1,
       },
       h2: {
-        fontSize: [4],
-        lineHeight: [4],
+        ...HeadingH2,
       },
       h3: {
-        fontSize: [3],
-        lineHeight: [3],
+        ...HeadingH3,
       },
       h4: {
-        fontSize: [2],
-        lineHeight: [2],
+        ...HeadingH4,
       },
       h5: {
-        fontSize: [1],
-        lineHeight: [1],
+        ...HeadingH5,
       },
       h6: {
-        fontSize: [0],
-        lineHeight: [0],
+        ...HeadingH6,
       },
+      p: {
+        mt: baselineMultiple(0.75),
+      },
+
+      strong: {
+        fontWeight: 'bold',
+      },
+
+      em: {
+        fontStyle: 'italic',
+      },
+
+      ul: {
+        mt: baselineMultiple(0.75),
+        px: [1],
+        li: {
+          listStyleType: 'square',
+        },
+      },
+      ol: {
+        mt: baselineMultiple(0.75),
+        px: [1, 2],
+        li: {
+          listStyleType: 'number',
+        },
+      },
+      li: {
+        mt: baselineMultiple(0.5),
+
+      },
+      video: {
+        width: '100%',
+        maxWidth: '100%',
+        height: '100%',
+      },
+      img: {
+        width: '100% ',
+      },
+      pre: {
+        ...nightOwl,
+      }
+    },
+    SingleVideo: {
+      width: '80%',
+      borderRadius: '0.35em',
+      boxShadow: '0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07)',
+      '& video': {
+        borderRadius: '0.35em',
+      }
+    },
+    Slide: {
+      textAlign: 'left',
+      alignItems: 'start',
     },
   },
   lists: {
@@ -124,9 +257,9 @@ export default {
       m: 0,
       p: 0,
       display: 'flex',
-      listStyleType: 'none',
-      fontSize: [1],
+      fontSize: [0],
       li: {
+        listStyleType: 'none',
         ml: '1rem',
         ':first-of-type': {
           ml: 0,

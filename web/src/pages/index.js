@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import { GraphQLErrorList, SEO, PortableText, HomeLinks } from 'components';
 
@@ -32,8 +32,8 @@ const IndexPage = ({ data, errors }) => {
     <>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       {homepage._rawBody && <PortableText blocks={homepage._rawBody || []} />}
+      <Link to="/decks">Decks</Link>
       <HomeLinks />
-
       {/* {projectNodes && <ProjectPreviewGrid title="Latest projects" nodes={projectNodes} browseMoreHref="/archive/" />} */}
     </>
   );

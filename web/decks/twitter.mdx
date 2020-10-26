@@ -1,0 +1,1114 @@
+import { Box } from 'theme-ui';
+import Video from '../src/components/video.js';
+import Image from '../src/components/image.js';
+import {FullScreenCode} from 'gatsby-theme-mdx-deck'
+
+<Box sx={{variant: 'layouts.coverPage'}}>
+
+# Artem Artemov
+
+#### Portfolio Presentation ⚡️
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.defaultTextWithImage'}}>
+
+<div style={{maxHeight: '80vh'}}>
+
+ ![Portrait of Artem and his pup, Lola](../../images/Portrait.jpg)
+
+</div>
+
+## Hi, I'm Artem! 👋
+and this is Lola with her big tongue 🐶
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.defaultTextWithImage'}}>
+
+<div style={{maxHeight: '80vh'}}>
+
+![Hopper The Rabbit](../../images/dj.jpg)
+
+</div>
+
+What a happy camper! 🎶
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.defaultTextWithImage'}}>
+
+<div style={{maxHeight: '60vh', maxWidth: '36vw'}}>
+
+ ![Hopper The Rabbit](../../images/katie.jpg)
+
+</div>
+
+This is Katie!
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.coverPage'}}>
+
+**Case Study**
+
+# Custom Feeds
+
+#### A modular approach to managing content on feed pages
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPage'}}>
+
+| Role 👨‍💻                                                                 |
+| ----------------------------------------------------------------------- |
+| - End to end design                                                     |
+|                                                                         |
+| - Research (user testing, competative analysis, in-person interviewing) |
+|                                                                         |
+| - Wireframing & prototyping                                             |
+|                                                                         |
+| - User experience and user interface design                             |
+|                                                                         |
+| - Front-end development partnership with engineering                    |
+
+| Team 👯‍♂️                  |
+| ------------------------ |
+| - Creative Director      |
+|                          |
+| - Myself                 |
+|                          |
+| - Product Manager        |
+|                          |
+| - Engineering team       |
+|                          |
+| - Quality assurance team |
+
+</Box>
+
+
+---
+
+<Box sx={{variant: 'layouts.splitPage'}}>
+
+<div style={{width: '45vw'}}>
+
+### Tools Used 🔨
+
+- Sketch
+- Usertesting.com
+- Pen (sometimes pencil) & paper
+- SCSS for styling & TWIG for templating
+
+</div>
+
+<div style={{width: '45vw'}}>
+
+### Timeline 🕐
+
+- ~ 10 months
+- start date: June 2018
+
+</div>
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPage'}}>
+
+![Mockup of Esquire.com landing page](../../images/esq.png)
+
+![Mockup of Elle.com landing page](../../images/elle.png)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+## Terminology 🤓
+
+**Landing Feeds**: all landing pages across Hearst Magazines websites
+
+**A Block**: a story, or group of stories, packaged together in a customizable "lego piece"
+
+**Feed Builder**: the content creation tool powering all of the custom feeds and their respective blocks
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+# The Problem
+
+  <Video src="/custom-feeds/CustomFeeds_LegacyFeed_comso_MOCK-compressed.mp4" />
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# The Project Brief
+lets start unpacking!
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+**Custom feeds**: are an improvement from legacy feed pages, which presented content in a reverse-chron list with limited options for styling, or promoting specific high-value articles/galleries.
+
+![Mockups of landing pages](../../images/feedmocks.jpg)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+**Custom feed creation tool**: allows editors to curate blocks of content, that they can use to build customized homepages, and other landing pages on the brand's respective website.
+
+![Mockups of landing pages](../../images/feedbuilder.jpg)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+### The Project Brief cont.
+
+**Custom feeds** will offer a **modular** approach for managing content on landing feed pages to support more **visually compelling layouts**, and present content in a **curated** and unique way.
+
+The **complexity** of styling a new site, or redesigning current sites, **should not** be impacted by this new feature.
+
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+# Research & User Testing
+
+  <div style={{overflow: 'hidden', minHeight: '52vh', width: '100%', position: 'relative', lineHeight: '0'}}>
+	  <Video src="/custom-feeds/customFeeds_research-compressed.mp4" style={{position: 'absolute', top: '1px', left: '0'}} />
+  </div>
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+| The Blocks         |
+| ------------------ |
+| - `Big Story`      |
+| - `Big Story Feed` |
+| - `4 Across`       |
+| - `3 Column`       |
+
+<Video src="/custom-feeds/CustomFeeds_BrandedSites_Final_MOCK-compressed.mp4" />
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+| Big Story             |
+| --------------------- |
+| - `supports video 📹` |
+| - `big moments! 🎉`   |
+| - `editor love 💞`    |
+
+![Big Story Block Wireframe](../../images/bigstory.png)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+| Big Story Feed                  |
+| ------------------------------- |
+| - `great for "newsy" content 🗞` |
+| - `more content in a view ⧉`    |
+| - `users love it ❤️`             |
+
+![Big Story Feed Block Wireframe](../../images/bigstoryfeed.png)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+| 4 Across                  |
+| ------------------------- |
+| - `image forward 📸`      |
+| - `condensed content 📄`  |
+| - `great breaker bars 〰` |
+
+![4 Across Block Wireframe](../../images/4across.png)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+| 3 Column                             |
+| ------------------------------------ |
+| - `most condensed block 🧱`          |
+| - `great for most recent stories 🆕` |
+| - `can contain 3 sections ⧉`         |
+
+![4 Across Block Wireframe](../../images/3column.png)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# The Blocks: Conclusion 🏁
+
+Having a **consice set of blocks** allowed the editors to **quickly create** content for their brands. One of the main pain points that we had to consider while creating these blocks, was for editors **to not spend too much time** on these pages.
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+#### The Blocks: Conclusion
+
+By only having **4 types** of blocks, the editors quickly were able to design **unique landing pages**. Each block type has **many different layout options**, so the flow of content does not look or feel repetative.
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+#### The Blocks: Conclusion
+
+A **HUGE** win 🥳 for us turned out to be that each of the 4 block types shared the same atoms (image, headline, dek, byline and date). This allowed for spinning up a new brand with unique styles quickly and efficiently.
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.coverPage'}}>
+
+# Creating resuable patterns in code
+
+with SCSS, placeholder, and an atomic structure ⚛︎
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+## Layouts -> Blocks -> Items
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPage'}}>
+
+#### Layouts
+
+- **Layouts** are styles which control the structure of blocks. These are globally set styles that have no theming.
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPage'}}>
+
+#### Layouts -> Blocks
+
+- **Blocks** contain specific styles for the block types. This can be background styles, borders, and how much they break out of our grid.
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPage'}}>
+
+#### Layouts -> Blocks -> Items
+
+- **Items** are styles specific to each individual article or story. These house the styles for Headlines, bylines, deks, and dates
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.codePage'}}>
+
+```scss
+// Global layout styles
+.feed-block-with-ad {
+	width: 100vw;
+
+	@include respond-to( $breakpoint-tablet ) {
+		.feed-block-header {
+			grid-column: 1 / 3;
+		}
+	}
+
+	.feed-block-content {
+		margin-left: -$mobile-outer-gutter;
+	}
+}
+
+// Shared global styles for custom block header container
+.feed-block-header {
+	margin-bottom: $vertical-rhythm-outer;
+	@extend %custom-feed-block-header !optional;
+
+	&.icon-header {
+		@extend %custom-feed-block-header-icon-container !optional;
+
+		& .block-icon {
+			@extend %custom-feed-block-header-icon !optional;
+		}
+	}
+}
+
+// Brand styles for custom block header container
+%custom-feed-block-header {
+	position: relative;
+	margin-bottom: $margin-s;
+	padding-top: $margin-s;
+	overflow: hidden;
+
+	@include respond-to( $breakpoint-tablet-wide ) {
+		margin-bottom: $vertical-rhythm-outer;
+		padding-top: $vertical-rhythm-inner;
+	}
+}
+```
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Feed Builder
+
+internal tool for creating custom feeds 💅
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# User Testing
+we are all ears! 👂
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.fullImagePage'}}  >
+
+![Lenny is thinking gif](https://media4.giphy.com/media/eNTxLwTGW7E64/giphy.gif)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+# The Initial Wireframes
+
+  <Video src="/custom-feeds/CustomFeeds_legacyEdit_initialMocks_MOCK-compressed.mp4" />
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+# Uh Oh...
+  <Video src="/custom-feeds/CustomFeeds_legacyEdit_complicatedflows_MOCK-compressed.mp4" />
+
+</Box>
+
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+# Start Wearing Purple 👾
+
+  <Video src="/custom-feeds/CustomFeeds_purpleMocks_MOCK-compressed.mp4" />
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Feed Builder 2.0
+`final_v2_copy-finalFinal.psd` 😅
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.defaultTextWithImage'}}>
+
+<Video src="/custom-feeds/CustomFeeds_finalMocks_hq_MOCK-compressed.mp4" />
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Some Stats! 📈
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Some Stats! 📈
+### Refferals from the homepage increased across all devices year to year ☝️ ☝️ ☝️
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Some Stats! 📈
+
+### Mobile 📱
+42.04% -> 66.58%
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Some Stats! 📈
+
+### Tablet 💁‍♀️
+68.38% -> 75.72%
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Some Stats! 📈
+
+### Desktop 🖥
+41.63% -> 58.05%
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.defaultTextWithImage'}}>
+
+<Video src="/custom-feeds/CustomFeeds_BrandedSites_Final_MOCK-compressed.mp4" />
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.coverPage'}}>
+
+# The End
+
+##### **Next Up**: What the SSO?!
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.coverPage'}}>
+
+**Case Study**
+
+# Mylo SSO & Account Management
+
+#### Sign in with Mylo to securely control preferences, privacy and purchases.
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPage'}}>
+
+| Role 👨‍💻                                                                 |
+| ----------------------------------------------------------------------- |
+| - End to end design                                                     |
+|                                                                         |
+| - Research (user testing & competative analysis) |
+|                                                                         |
+| - Wireframing & prototyping                                             |
+|                                                                         |
+| - User experience and user interface design                             |
+|                                                                         |
+| - Front-end development partnership with engineering                    |
+
+| Team 👯‍♂️                             |
+| ----------------------------------- |
+| - Myself + 1 other product designer |
+|                                     |
+| - Product Manager                   |
+|                                     |
+| - Engineering team                  |
+|                                     |
+| - Quality assurance team            |
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPage'}}>
+
+<div style={{width: '45vw'}}>
+
+### Tools Used 🔨
+
+- Sketch / Figma
+- Styled-components for styling
+
+</div>
+
+<div style={{width: '45vw'}}>
+
+### Timeline 🕐
+
+- ~ 8 months
+- start date: April 2019
+
+</div>
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+## What the Mylo?
+
+**Mylo** is a service which allows consumers to **create accounts**, **sign in**,  **manage** their profiles as well as purchases across _many_ sites and _many_ businesses.
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.fullImagePage'}} style={{'& img': {borderRadius: '0'}}} >
+
+![Mylo Mockups](../../images/Mylo_devicemocks_all.jpg)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# The Problem
+
+Hearst Digital Media provides subscription services through their brands and their content, including: print magazines, newsletters, digital and physical products, content gating, and premium content that is only available to those users who pay for a subscription.
+
+Currently, users must **register and subscribe** to each brand **individually**. This creates **friction**, for signing up and checking out - but more importantly, it prevents the publishing industry from **collecting valuable information** about its users to serve more **direct** and more **engaging** content.
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# The Project Brief
+
+cookies run the world 🍪
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# All the flows
+
+from logging in, to signing up, and what happens when you forgot your password?
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.defaultTextWithImage'}}>
+
+  <Video src="/mylo/Mylo_userflows_MOCK-compressed.mp4" />
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+# Accessing Mylo
+
+  <Video src="/mylo/Mylo_zooming_access_MOCK-compressed.mp4" />
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Branding Guidelines
+
+A major challenge outside of the complexities of a SSO service, was creating branding guidelines. This really pushed me out of my comfort zone, but the end result is ✨
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.defaultTextWithImage'}}>
+
+  <Video src="/mylo/Mylo_branding-guidelines_hq_MOCK-compressed.mp4" />
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Figma Component Library
+
+Creating components for Mylo was the first step into learning how to create complex, modular, and reusable components in Figma.
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.defaultTextWithImage'}} >
+
+![Mylo Mockups](../../images/mylo_figmascreenshot.png)
+
+ Buttons buttons and more buttons!
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.defaultTextWithImage'}} >
+
+![Mylo Mockups](../../images/mylo_figma-inputs.png)
+
+ aaaand inputs!
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Customized brand sign in landing page
+
+reduce friction, increase signups ☝️
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.fullImagePage'}} >
+
+![Mylo Mockups](../../images/Mylo_devicemocks_all.jpg)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Mylo Accounts
+
+subscription, privacy, and account settings
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.fullImagePage'}} >
+
+![Mylo Mockups](../../images/Mylo-signin-flows.jpg)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.fullImagePage'}} >
+
+![Mylo Mockups](../../images/mylo_accounts.jpg)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Password Validation
+
+this was the key to increasing user signups
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.fullImagePage'}} >
+<div style={{overflow: 'hidden', height: '80vh', width: '100%', position: 'relative', lineHeight: '0'}}>
+	  <Video src="/mylo/Mylo_passwordflow_MOCK-compressed.mp4" style={{position: 'absolute', top: '-2px', left: '0', height: 'calc(100% + 4px)'}} />
+  </div>
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Reflections & Learnings
+
+Building trust is a tricky thing
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.coverPage'}}>
+
+# The End
+
+##### **Next Up**: Figma, design systems, and Scribe ✏️
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.coverPage'}}>
+
+**Case Study, _kind of_**
+
+# Scribe component library & Figma
+
+#### Switching tools, building components, and learning to stop worrying and love Figma
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPage'}}>
+
+| Role 👨‍💻                                                                 |
+| ----------------------------------------------------------------------- |
+| - Understanding and mastering Figma                                     |
+|                                                                         |
+| - Mentored designers on how to use new tools and workflows |
+|                                                                         |
+| - UX & UI design and code                                             |
+|                                                                         |
+| - Onboarding of cross-discipline teams                             |
+|                                                                         |
+| - Designing and implementing a theming system in react                    |
+
+| Team 👯‍♂️                             |
+| ----------------------------------- |
+| - Myself + 1 other product designer |
+|                                     |
+| - Engineering team                  |
+
+
+</Box>
+
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+### Tools Used 🔨
+
+- Figma!
+- css-variables
+- styled-components
+- styled-system & Theme-UI
+- zoom
+
+#
+
+### Timeline 🕐
+
+- ~ 10 months and counting
+- start date: January 2020
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.fullImagePage'}}>
+
+  <div style={{maxWidth: '45vw', margin: '0 auto'}}>
+
+![Artem + Figma = Love](../../images/artemfigmalove.jpg)
+
+  </div>
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# The Problem
+
+As we are developing a new content publishing platform called **Scribe**, we are shifting focus from an **internal tool - to a SaaS product**.
+
+It quickly became apparent that our current set of design tools **can no longer empower us** to build out a scalable product.
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+### The Problem cont.
+
+We also do not know the type of applications or "services" that will need to be powered _by_ scribe. We knew that whatever system we build should be device and platform agnostic.
+
+This is why we went with a tool stack of: Figma, styled-systems, css-variables, clear component naming structure where the code is the source of truth, and working on implementing tooling that connects code and design in a bi-directional manner.
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.fullImagePage'}}>
+
+  <div style={{maxWidth: '45vw', margin: '0 auto'}}>
+
+![pretty pretty good gif](https://media3.giphy.com/media/bWeR8tA1QV4cM/giphy.gif?cid=ecf05e47knec73e79df5unxl82n1kfwg1uz5fy80s009q3q7&rid=giphy.gif)
+
+<small style={{fontSize: '0.3em', fontStyle: 'italic'}}>
+
+(oh and I recently found out that Figma's new variations feature is going to plug right into our system without any component restructuring -- pretty, pretty good)
+
+</small>
+
+  </div>
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+  <div>
+
+### Inconsisten UX and UI
+
+Each product in the content editor had drastically different UX for even the most important and top-level items, such as the search and filter area.
+
+  </div>
+
+  <Video src="/design-systems/inconsistent-components.mp4" />
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+### No central library 👎
+
+![Travolta, where art thou? gif](https://media1.giphy.com/media/VIQfHC9jAZbt6ojTdo/giphy.gif?cid=ecf05e47wanvv27pkoonzrkevwfakxvqrxm55py41pe187x6&rid=giphy.gif)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Figma
+
+we needed Figma, **bad**
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Today
+
+we have a fully function backend-design component library that powers multiple services, including **Scribe** which is our new iteration of the publishing platform built upon a fresh tech stack.
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPage'}}>
+
+# Mentoring designers via multiple 2:1 zoom sessions
+
+  <Video src="/design-systems/DS_componentcreationoverview-compressed.mp4" />
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPageText'}}>
+
+<div>
+
+## Component Library Analytics
+
+👍 over 27k inserts of components in 2020
+
+👍 used across 8 different product track teams
+
+👍 consists of 419 components & counting
+
+👍 2.8k inserts just this past week!
+
+</div>
+
+![Component Library Analytics Screenshot](../../images/libanalytics.png)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# Scribe
+
+The next generation content creation platform for publishers.
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.fullImagePage'}}>
+
+![Scribe Mockup](../../images/scribe.jpg)
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.codePage'}}>
+
+```js
+// Default theme values
+export const lightTheme = {
+  name: 'light',
+  primary: system.light.blue,
+  text: {
+    primary: colors.black[80],
+    secondary: colors.black[70],
+    tertiary: colors.black[40],
+  },
+  borderColor: 'transparent',
+  background: {
+    primary: colors.black[5],
+    secondary: system.light.white,
+    tertiary: 'hsl(208, 28%, 97%)',
+    disabled: colors.black[10],
+    separator: {
+      opaque: 'hsl(212, 3%, 90%)',
+      nonOpaque: 'hsla(212, 9%, 30%, 0.8)',
+    },
+  },
+  error: system.light.red,
+  success: system.light.green,
+  warning: system.light.yellow,
+};
+```
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.splitPage'}}>
+
+  ```jsx
+  export default createGlobalStyle`
+    :root {
+      // colors
+      --primary: ${({ theme }) => theme.primary};
+      --primaryLinkColor: ${({ theme }) => theme.primary};
+      --primary-darken-1: ${({ theme }) => darken(0.15, theme.primary)};
+      --primary-darken-2: ${({ theme }) => darken(0.4, theme.primary)};
+      --primary-lighten-1: ${({ theme }) => lighten(0.125, theme.primary)};
+      --primary-lighten-2: ${({ theme }) => lighten(0.4, theme.primary)};
+
+      // backgrounds
+      --primary-background: ${({ theme }) => theme.background.primary};
+      --secondary-background: ${({ theme }) => theme.background.secondary};
+      --tertiary-background: ${({ theme }) => theme.background.tertiary};
+      --disabled-background: ${({ theme }) => theme.background.disabled};
+    }
+  `
+  ```
+
+<div style={{height: '474px'}}>
+
+<Video src="/design-systems/scribe_lightdarkmode-compressed.mp4" />
+
+</div>
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.textPage'}}>
+
+# What I have learned 🤓
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.coverPage'}}>
+
+# Why Twitter?
+
+</Box>
+
+---
+
+<Box sx={{variant: 'layouts.coverPage'}}>
+
+# and how can I help?
+
+</Box>
