@@ -84,8 +84,9 @@ export default {
       padding: '4%',
       '& img': {
         width: '100%',
-        maxWidth: '100vw',
+        maxWidth: '80vw',
         maxHeight: '80vh',
+        mx: 'auto',
       },
     },
     codePage: {

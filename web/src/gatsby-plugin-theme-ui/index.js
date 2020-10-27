@@ -153,16 +153,6 @@ export default {
       fontWeight: 'body',
       fontSize: 0,
       lineHeight: 0,
-
-      main: {
-        display: 'flex',
-        flexDirection: 'column',
-        flex: '1',
-        justifyContent: 'center',
-        margin: ['0 1rem', '0 auto'],
-        maxWidth: [null, '600px'],
-        textAlign: 'left',
-      },
       footer: {
         width: '100%',
         display: 'flex',
