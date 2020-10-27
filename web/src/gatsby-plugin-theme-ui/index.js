@@ -232,9 +232,6 @@ export default {
         maxWidth: '100%',
         height: '100%',
       },
-      img: {
-        width: '100% ',
-      },
       pre: {
         ...nightOwl,
       }
