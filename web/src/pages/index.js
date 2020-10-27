@@ -1,29 +1,23 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
-import { GraphQLErrorList, SEO, Layout, BlockContent, HomeLinks } from 'components';
+import { GraphQLErrorList, SEO, PortableText, HomeLinks } from 'components';
 
 export const query = graphql`
   query IndexPageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
-      description
-      keywords
     }
     homepage: sanityIndexPage {
       title
-      _rawBody
+      _rawBody(resolveReferences: { maxDepth: 5 })
     }
   }
 `;
 
 const IndexPage = ({ data, errors }) => {
   if (errors) {
-    return (
-      <Layout>
-        <GraphQLErrorList errors={errors} />
-      </Layout>
-    );
+    return <GraphQLErrorList errors={errors} />;
   }
 
   const { site, homepage } = data || {};
@@ -35,13 +29,13 @@ const IndexPage = ({ data, errors }) => {
   }
 
   return (
-    <Layout>
+    <>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
-      {homepage._rawBody && <BlockContent blocks={homepage._rawBody || []} />}
+      {homepage._rawBody && <PortableText blocks={homepage._rawBody || []} />}
+      <Link to="/decks">Decks</Link>
       <HomeLinks />
-
       {/* {projectNodes && <ProjectPreviewGrid title="Latest projects" nodes={projectNodes} browseMoreHref="/archive/" />} */}
-    </Layout>
+    </>
   );
 };
 

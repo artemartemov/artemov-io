@@ -1,7 +1,18 @@
-import React from 'react';
+import { Link } from 'gatsby';
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
+
+// TODO: convert hard coded links into sanity array of homepageLinks
 
 const HomeLinks = () => (
-  <ul>
+  <ul
+    sx={{
+      variant: 'lists.homepage',
+    }}
+  >
+    <li>
+      <a href="ArtemArtemovResume.pdf">Resume</a>
+    </li>
     <li>
       <a href="mailto:artem@artemov.io?subject=Services Requested&body= --- Sent from artemov.io">Email</a>
     </li>

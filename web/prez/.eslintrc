@@ -1,0 +1,6 @@
+{
+	"rules": {
+	  "react/jsx-no-undef": 0,
+	  "no-multiple-empty-lines": [2, {"max": 4, "maxEOF": 1}]
+	}
+}

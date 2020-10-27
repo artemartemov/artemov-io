@@ -11,6 +11,8 @@ module.exports = {
   plugins: [
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
+    'gatsby-remark-video',
+    'gatsby-plugin-preload-fonts',
     'gatsby-plugin-theme-ui',
     {
       resolve: `gatsby-source-filesystem`,
@@ -33,7 +35,27 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
-    `gatsby-plugin-mdx`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-theme-mdx-deck`,
+      options: {
+        contentPath: `prez`,
+        basePath: `/prez`,
+      },
+    },
     {
       resolve: 'gatsby-source-sanity',
       options: {
@@ -43,13 +65,6 @@ module.exports = {
         overlayDrafts: !isProd,
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-typography',
-    //   options: {
-    //     pathToConfigModule: `src/utils/typography.js`,
-    //     omitGoogleFont: true,
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
