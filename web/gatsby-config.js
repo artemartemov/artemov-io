@@ -10,6 +10,7 @@ const isProd = process.env.NODE_ENV === 'production';
 module.exports = {
   plugins: [
     'gatsby-plugin-postcss',
+    'gatsby-plugin-preact',
     'gatsby-plugin-react-helmet',
     'gatsby-remark-video',
     'gatsby-plugin-preload-fonts',
@@ -33,20 +34,6 @@ module.exports = {
       options: {
         name: 'pages',
         path: `${__dirname}/src/pages/`,
-      },
-    },
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-            },
-          },
-        ],
       },
     },
     {

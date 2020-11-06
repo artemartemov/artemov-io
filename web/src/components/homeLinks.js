@@ -1,37 +1,36 @@
-import { Link } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 
-// TODO: convert hard coded links into sanity array of homepageLinks
+const homeLinksQuery = graphql`
+  query HomeLinksQuery {
+    homepage: sanityIndexPage {
+      homepageLinks {
+        linkText
+        linkUrl
+      }
+    }
+  }
+`;
 
 const HomeLinks = () => (
-  <ul
-    sx={{
-      variant: 'lists.homepage',
+  <StaticQuery
+    query={homeLinksQuery}
+    render={(data) => {
+      const homeLinks = (data && data.homepage.homepageLinks) || '';
+      return (
+        <ul sx={{ variant: 'lists.homepage' }}>
+          {homeLinks.map((link) => (
+            <li key={link.linkUrl.length}>
+              <a rel="noreferrer" target="_blank" href={link.linkUrl}>
+                {link.linkText}
+              </a>
+            </li>
+          ))}
+        </ul>
+      );
     }}
-  >
-    <li>
-      <a href="ArtemArtemovResume.pdf">Resume</a>
-    </li>
-    <li>
-      <a href="mailto:artem@artemov.io?subject=Services Requested&body= --- Sent from artemov.io">Email</a>
-    </li>
-    <li>
-      <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/artem-artemov-6895a527">
-        LinkedIn
-      </a>
-    </li>
-    <li>
-      <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/artemartemov/">
-        Instagram
-      </a>
-    </li>
-    <li>
-      <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/artemartemov">
-        Twitter
-      </a>
-    </li>
-  </ul>
+  />
 );
 
 export default HomeLinks;

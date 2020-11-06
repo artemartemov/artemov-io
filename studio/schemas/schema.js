@@ -24,6 +24,7 @@ import projectPortableText from './objects/projectPortableText';
 import simplePortableText from './objects/simplePortableText';
 import portableText from './objects/portableText';
 import cta from './objects/cta';
+import singleHomepageLink from './objects/singleHomepageLink';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -41,6 +42,7 @@ export default createSchema({
     projectPortableText,
     simplePortableText,
     cta,
+    singleHomepageLink,
     // The following are document types which will appear
     // in the studio.
     route,

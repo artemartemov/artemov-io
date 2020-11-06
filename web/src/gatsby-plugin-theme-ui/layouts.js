@@ -1,9 +1,34 @@
 export default {
   layouts: {
+    footer: {
+      fontSize: '2rem',
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'start',
+      marginTop: 'auto',
+      small: {
+        mb: '1rem',
+      },
+    },
     root: {
       display: 'flex',
       flexDirection: 'column',
       minHeight: '100vh',
+      maxWidth: '60vw',
+      mx: 'auto',
+
+      '& h1': {
+        fontSize: [1, 2, 3],
+        lineHeight: [1, 3, 3],
+      },
+      '& h2': {
+        fontSize: [0, 1],
+        fontWeight: '700',
+      },
+
+      '& main': {
+        mt: 'auto',
+      },
     },
     coverPage: {
       backgroundColor: 'primary',
@@ -100,10 +125,6 @@ export default {
     },
   },
   header: {
-    color: 'white',
-    backgroundColor: 'black',
-  },
-  footer: {
     color: 'white',
     backgroundColor: 'black',
   },

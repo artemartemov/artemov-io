@@ -153,16 +153,6 @@ export default {
       fontWeight: 'body',
       fontSize: 0,
       lineHeight: 0,
-      footer: {
-        width: '100%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-
-        small: {
-          mb: '1rem',
-        },
-      },
       a: {
         color: 'primary',
         '&:hover': {
@@ -242,14 +232,18 @@ export default {
   lists: {
     homepage: {
       m: 0,
+      mt: baselineMultiple(1),
       p: 0,
       display: 'flex',
-      fontSize: [0],
+      flexFlow: 'row wrap',
+      justifyContent: ['space-between', 'space-between', 'start'],
+      flexDirection: ['column', 'row'],
+      fontSize: ['1.25rem', '1.25rem', '1.33rem', 0],
       li: {
         listStyleType: 'none',
-        ml: '1rem',
-        ':first-of-type': {
-          ml: 0,
+        ml: ['0', baselineMultiple(0.5), baselineMultiple(0.75)],
+        '&:first-of-type': {
+          ml: '0',
         },
       },
     },
