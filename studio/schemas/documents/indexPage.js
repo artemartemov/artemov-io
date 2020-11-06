@@ -21,6 +21,12 @@ export default {
       title: 'Body',
       type: 'portableText',
     },
+    {
+      name: 'homepageLinks',
+      title: 'Homepage Links',
+      type: 'array',
+      of: [{ type: 'singleHomepageLink' }],
+    },
   ],
   preview: {
     select: {
