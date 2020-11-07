@@ -2,26 +2,11 @@
 import layouts from './layouts';
 import '../fonts/fonts.css';
 import components from './components'
+import { baselineMultiple, BASELINE, SPACE, FONT_SIZES, LINE_HEIGHTS } from './verticalRhythm'
 
 import nightOwl from '@theme-ui/prism/presets/night-owl'
 
-const BASE_FONT = 32;
-const BASE_LINE_HEIGHT = 1.5;
-const BASELINE = BASE_FONT * BASE_LINE_HEIGHT;
-
 const BREAKPOINTS = ['768px', '960px', '1200px', '1220px'];
-
-const RATIO = 1.33;
-
-// [ 16, 23, 32, 45, 64, 90 ]
-const FONT_SIZES = [0, 1, 2, 3, 4, 5].map((n) => Math.round(BASE_FONT * RATIO ** n));
-
-// [ 1.5, 1.0435, 1.5, 1.0667, 1.125, 1.0667 ]
-const LINE_HEIGHTS = FONT_SIZES.map((f) => (Math.ceil(f / BASELINE) * BASELINE) / f);
-
-const baselineMultiple = (w) => (theme) => theme.baseline * w;
-
-const SPACE = [0, 1, 2, 4, 8].map((s) => s * BASELINE);
 
 const COLORS = {
   text: '#000',
@@ -232,7 +217,7 @@ export default {
   lists: {
     homepage: {
       m: 0,
-      mt: baselineMultiple(1),
+      mt: [baselineMultiple(0.25), baselineMultiple(1)],
       p: 0,
       display: 'flex',
       flexFlow: 'row wrap',
@@ -241,7 +226,7 @@ export default {
       fontSize: ['1.25rem', '1.25rem', '1.33rem', 0],
       li: {
         listStyleType: 'none',
-        ml: ['0', baselineMultiple(0.5), baselineMultiple(0.75)],
+        ml: ['0', baselineMultiple(0.25), baselineMultiple(0.5)],
         '&:first-of-type': {
           ml: '0',
         },

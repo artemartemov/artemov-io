@@ -20,7 +20,7 @@ const Layout = ({ children, href = useLocation() }) => {
       >
         <Box as="small">
           © {new Date().getFullYear()}, Built with 💛&nbsp;using <Link href="https://www.sanity.io">Sanity</Link> &amp;{' '}
-          <Link href="https://www.gLinktsbyjs.org">Gatsby</Link>
+          <Link href="https://www.gatsbyjs.org">Gatsby</Link>
         </Box>
       </Box>
     </Box>
