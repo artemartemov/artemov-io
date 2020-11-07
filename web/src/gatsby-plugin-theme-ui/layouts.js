@@ -1,29 +1,32 @@
+import { baselineMultiple } from './verticalRhythm';
+
 export default {
   layouts: {
     footer: {
-      fontSize: '2rem',
       width: '100%',
       display: 'flex',
       justifyContent: 'start',
       marginTop: 'auto',
       small: {
-        mb: '1rem',
+        my: '1rem',
+        fontSize: '1rem',
       },
     },
     root: {
       display: 'flex',
       flexDirection: 'column',
       minHeight: '100vh',
-      maxWidth: '60vw',
+      maxWidth: ['none', '60vw'],
       mx: 'auto',
-
+      px: ['0.5rem', '0'],
       '& h1': {
-        fontSize: [1, 2, 3],
+        fontSize: [0, 1, 2, 3],
         lineHeight: [1, 3, 3],
       },
       '& h2': {
-        fontSize: [0, 1],
+        fontSize: ['1rem', 0, 1],
         fontWeight: '700',
+        mt: [baselineMultiple(0.25), baselineMultiple(1)],
       },
 
       '& main': {
