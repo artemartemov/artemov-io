@@ -136,7 +136,7 @@ export default {
     root: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: 0,
+      fontSize: 1,
       lineHeight: 0,
       a: {
         color: 'primary',
