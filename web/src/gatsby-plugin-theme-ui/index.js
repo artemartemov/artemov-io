@@ -164,6 +164,7 @@ export default {
       },
       p: {
         mt: baselineMultiple(0.75),
+        fontSize: '1rem',
       },
 
       strong: {
