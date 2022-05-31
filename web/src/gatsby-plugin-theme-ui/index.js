@@ -136,7 +136,7 @@ export default {
     root: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: 0,
+      fontSize: 1,
       lineHeight: 0,
       a: {
         color: 'primary',
@@ -164,6 +164,7 @@ export default {
       },
       p: {
         mt: baselineMultiple(0.75),
+        fontSize: '1rem',
       },
 
       strong: {
