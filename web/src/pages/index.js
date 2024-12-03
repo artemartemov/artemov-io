@@ -1,7 +1,7 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
-import { GraphQLErrorList, SEO, PortableText, HomeLinks } from 'components';
+import { GraphQLErrorList, SEO } from 'components';
 
 export const query = graphql`
   query IndexPageQuery {
@@ -31,8 +31,11 @@ const IndexPage = ({ data, errors }) => {
   return (
     <>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
-      {homepage._rawBody && <PortableText blocks={homepage._rawBody || []} />}
-      <HomeLinks />
+      <h1>Artem Artemov is working on design systems at <a href="https://siriusxm.com" target='_blank'>SiriusXM</a></h1>
+      <h2>Currently residing in in Denver, Colorado.</h2>
+            <p>
+            📄<a rel="noreferrer" target="_blank" href="/artem-artemov-resume.pdf"> Resume</a>
+            </p>
     </>
   );
 };
